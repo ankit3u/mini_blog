@@ -1,0 +1,24 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+<style>
+   img{
+    width:50%;
+    height: 50%;
+    border-radius: 5px;
+
+   } 
+</style>
+<div class="container">
+
+    {% for i in image %}
+    <h2 class="">{{i.title}}</h2> 
+    <img src="{{i.image.url}}" class="img-fluid my-5" > 
+    <p class="my-5 ml-3">{{i.desc}}</p> 
+    <p class="my-2">{{i.time}}</p> <br> <hr>
+    {% endfor %}
+</div>
+
+    
+    
+</form>
+{% endblock %}
